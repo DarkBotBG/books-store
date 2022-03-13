@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _5_3_2022.Views;
+using System;
 
 namespace Books
 {
@@ -6,7 +7,7 @@ namespace Books
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Display display = new Display();
         }
     }
 }

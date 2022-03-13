@@ -10,7 +10,19 @@ namespace _5_3_2022.Models
         public string Автор { get; set; }
         public string Издател { get; set; }
         public int? Цена { get; set; }
+        public Kniga()
+        {
 
+        }
+        public Kniga(int id,string name,string autor,string publisher,int price)
+        {
+            this.Id = id;
+            this.Име = name;
+            this.Автор = autor;
+            this.Издател = publisher;
+            this.Цена = price;
+
+        }
         
            
     }
