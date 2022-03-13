@@ -14,7 +14,7 @@ namespace _5_3_2022.Controller
         {
             using (booksContext = new booksContext())
             {
-                return booksContext.Kniga.ToList();
+                return booksContext.Knigi.ToList();
             }
 
         }
@@ -23,14 +23,14 @@ namespace _5_3_2022.Controller
         {
             using (booksContext = new booksContext())
             {
-                return booksContext.Kniga.Find(Id);
+                return booksContext.Knigi.Find(Id);
             }
         }
         public void Add(Kniga kniga)
         {
             using (booksContext = new booksContext())
             {
-                booksContext.Kniga.Add(kniga);
+                booksContext.Knigi.Add(kniga);
                 booksContext.SaveChanges();
             }
         }
@@ -38,7 +38,7 @@ namespace _5_3_2022.Controller
         {
             using (booksContext = new booksContext())
             {
-                var item = booksContext.Kniga.Find(kniga.Id);
+                var item = booksContext.Knigi.Find(kniga.Id);
                 if (item != null)
                 {
                     booksContext.Entry(item).CurrentValues.SetValues(kniga);
@@ -50,10 +50,10 @@ namespace _5_3_2022.Controller
         {
             using (booksContext = new booksContext())
             {
-                var product = booksContext.Kniga.Find(Id);
+                var product = booksContext.Knigi.Find(Id);
                 if (product != null)
                 {
-                    booksContext.Kniga.Remove(product);
+                    booksContext.Knigi.Remove(product);
                     booksContext.SaveChanges();
                 }
 

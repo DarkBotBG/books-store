@@ -65,16 +65,20 @@ namespace _5_3_2022.Views
         private void Add()
         {
             Kniga books = new Kniga();
+            BooksBusiness bookcontrpller = new BooksBusiness();
             Console.WriteLine("Id: ");
             books.Id = int.Parse(Console.ReadLine());
             Console.WriteLine("Name: ");
-            books.Име = Console.ReadLine();
+            books.Name = Console.ReadLine();
             Console.WriteLine("Author: ");
-            books.Автор = Console.ReadLine();
+            books.Author = Console.ReadLine();
             Console.WriteLine("Publisher: ");
-            books.Издател = Console.ReadLine();
+            books.Publisher = Console.ReadLine();
             Console.WriteLine("Price: ");
-            books.Цена = (int?)decimal.Parse(Console.ReadLine());
+            books.Price = int.Parse(Console.ReadLine());
+
+            bookcontrpller.Add(books);
+            
             
         }
 
@@ -87,7 +91,7 @@ namespace _5_3_2022.Views
             var bookslist = books.GetAll();
             foreach (var item in bookslist )
             {
-                Console.WriteLine("{0} {1} {2} {3} {4} {5}", item.Id, item.Име, item.Автор, item.Издател, item.Цена );
+                Console.WriteLine("{0} {1} {2} {3} {4} ", item.Id, item.Name, item.Author, item.Publisher, item.Price );
             }
         }
 
@@ -103,13 +107,13 @@ namespace _5_3_2022.Views
                 Console.WriteLine("Id: ");
                 books.Id = int.Parse(Console.ReadLine());
                 Console.WriteLine("Name: ");
-                books.Име = Console.ReadLine();
+                books.Name = Console.ReadLine();
                 Console.WriteLine("Author: ");
-                books.Автор = Console.ReadLine();
+                books.Author = Console.ReadLine();
                 Console.WriteLine("Publisher: ");
-                books.Издател = Console.ReadLine();
+                books.Publisher = Console.ReadLine();
                 Console.WriteLine("Price: ");
-                books.Цена = (int?)decimal.Parse(Console.ReadLine());
+                books.Price = int.Parse(Console.ReadLine());
             }
             else
             {
@@ -127,10 +131,10 @@ namespace _5_3_2022.Views
             {
                 Console.WriteLine(new string('-', 40));
                 Console.WriteLine("ID: " + product.Id);
-                Console.WriteLine("Name:" + product.Име);
-                Console.WriteLine("Author: " + product.Автор);
-                Console.WriteLine("Publisher: " + product.Издател);
-                Console.WriteLine("Price: " + product.Цена);
+                Console.WriteLine("Name:" + product.Name);
+                Console.WriteLine("Author: " + product.Author);
+                Console.WriteLine("Publisher: " + product.Publisher);
+                Console.WriteLine("Price: " + product.Price);
                 
                 Console.WriteLine(new string('-', 40));
             }

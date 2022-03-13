@@ -15,7 +15,7 @@ namespace _5_3_2022.Models
         {
         }
 
-        public virtual DbSet<Kniga> Kniga { get; set; }
+        public virtual DbSet<Kniga> Knigi { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,7 +23,7 @@ namespace _5_3_2022.Models
             {
 #pragma warning disable CS1030 // #warning: 'To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.'
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-PTIRMGL\\SQLEXPRESS;Database=books;Integrated Security=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-PTIRMGL\\SQLEXPRESS;Database=Library3;Integrated Security=True;");
 #pragma warning restore CS1030 // #warning: 'To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.'
             }
         }
@@ -38,19 +38,19 @@ namespace _5_3_2022.Models
                     .HasColumnName("id")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Автор)
-                    .HasColumnName("автор")
+                entity.Property(e => e.Author)
+                    .HasColumnName("Author")
                     .HasMaxLength(10);
 
-                entity.Property(e => e.Издател)
-                    .HasColumnName("издател")
+                entity.Property(e => e.Publisher)
+                    .HasColumnName("Publisher")
                     .HasMaxLength(10);
 
-                entity.Property(e => e.Име)
-                    .HasColumnName("име")
+                entity.Property(e => e.Name)
+                    .HasColumnName("Name")
                     .HasMaxLength(10);
 
-                entity.Property(e => e.Цена).HasColumnName("цена");
+                entity.Property(e => e.Price).HasColumnName("Price");
             });
         }
     }
