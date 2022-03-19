@@ -53,5 +53,10 @@ namespace _5_3_2022.Models
                 entity.Property(e => e.Price).HasColumnName("Price");
             });
         }
+
+        public object GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

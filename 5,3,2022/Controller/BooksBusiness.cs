@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace _5_3_2022.Controller
 {
-    class BooksBusiness
+   public class BooksBusiness
     {
         private  booksContext booksContext;
+        
         public List<Kniga> GetAll()
         {
             using (booksContext = new booksContext())

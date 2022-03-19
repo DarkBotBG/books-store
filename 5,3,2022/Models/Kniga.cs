@@ -6,6 +6,8 @@ namespace _5_3_2022.Models
 {
     public partial class Kniga
     {
+        public double count;
+
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }

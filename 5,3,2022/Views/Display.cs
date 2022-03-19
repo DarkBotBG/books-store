@@ -104,6 +104,7 @@ namespace _5_3_2022.Views
             if (kniga != null)
             {
                 Kniga books = new Kniga();
+                BooksBusiness bookcontrpller = new BooksBusiness();
                 Console.WriteLine("Id: ");
                 books.Id = int.Parse(Console.ReadLine());
                 Console.WriteLine("Name: ");
@@ -114,6 +115,7 @@ namespace _5_3_2022.Views
                 books.Publisher = Console.ReadLine();
                 Console.WriteLine("Price: ");
                 books.Price = int.Parse(Console.ReadLine());
+                bookcontrpller.Update(books);
             }
             else
             {
